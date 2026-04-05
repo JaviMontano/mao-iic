@@ -1,130 +1,106 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3258,100:137DC5&height=220&section=header&text=IIC%20%E2%80%94%20Intent-Integrity%20Chain&fontSize=42&fontColor=FFD700&fontAlignY=35&desc=Cerrando%20la%20brecha%20entre%20intenci%C3%B3n%20y%20c%C3%B3digo&descSize=18&descColor=ffffff&descAlignY=55" alt="IIC Banner" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:122562,100:137DC5&height=180&section=header&text=IIC%20%E2%80%94%20Intent-Integrity%20Chain&fontSize=36&fontColor=FFFFFF&fontAlignY=35&desc=Cerrando%20la%20brecha%20entre%20intenci%C3%B3n%20y%20c%C3%B3digo&descSize=14&descAlignY=55&descColor=BBA0CC">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:122562,100:137DC5&height=180&section=header&text=IIC%20%E2%80%94%20Intent-Integrity%20Chain&fontSize=36&fontColor=FFFFFF&fontAlignY=35&desc=Cerrando%20la%20brecha%20entre%20intenci%C3%B3n%20y%20c%C3%B3digo&descSize=14&descAlignY=55&descColor=BBA0CC" width="100%">
+</picture>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/versión-2.7.16-137DC5?style=for-the-badge" alt="Versión" />
-  <img src="https://img.shields.io/badge/licencia-GPL--3.0-122562?style=for-the-badge" alt="Licencia" />
-  <img src="https://img.shields.io/badge/pipeline-8%20pasos-FFD700?style=for-the-badge" alt="Pipeline" />
-  <img src="https://img.shields.io/badge/plataformas-4-BBA0CC?style=for-the-badge" alt="Plataformas" />
+  <img src="https://img.shields.io/badge/v2.7.16-FFD700?style=flat-square" alt="v2.7.16">
+  <img src="https://img.shields.io/badge/GPL--3.0-22D3EE?style=flat-square" alt="GPL--3.0">
 </p>
 
----
+# IIC — Intent-Integrity Chain
 
-## Acerca de IIC
+> Cerrando la brecha entre intención y código
 
-**IIC (Intent-Integrity Chain)** es un kit de herramientas que preserva la intención del desarrollador desde la idea hasta la implementación. Genera Architecture Decision Records con verificación criptográfica en cada paso, asegurando que lo que se especificó es exactamente lo que se construyó.
-
-Compatible con múltiples asistentes de código IA: Claude Code, Codex, Gemini y OpenCode.
+Kit de herramientas que preserva la intención del desarrollador desde la idea hasta la implementación con verificación criptográfica en cada paso.
 
 ---
 
-## Características principales
-
-- **Pipeline de 8 pasos (specify → implement)** — Flujo completo desde especificación hasta implementación
-- **Verificación de integridad por paso** — Hash SHA256 encadenado en cada transición
-- **ADR automatizados** — Architecture Decision Records generados y trazados automáticamente
-- **Compatible multi-plataforma** — Claude Code, OpenAI Codex, Google Gemini y OpenCode
-- **Dashboard interactivo** — Kanban estático HTML con badges de clarificación y cadena BDD
-- **Trazabilidad completa de decisiones** — Cadena ininterrumpida de intención a código
-
----
-
-## Instalación
-
-Agrega IIC como plugin de Claude Code o úsalo como herramienta standalone:
+## 🚀 Instalación Rápida
 
 ```bash
-# Instalar vía Tessl
-tessl install tessl-labs/intent-integrity-kit
-
-# O clonar localmente
-git clone https://github.com/JaviMontano/mao-iic.git
-cd mao-iic
+git clone https://github.com/JaviMontano/mao-iic.git ~/.claude/plugins/mao-iic
 ```
 
----
+## 🔑 Qué Hace
 
-## Pipeline de integridad
+- Pipeline de 8 pasos con verificación de integridad
+- ADR automatizados con hash SHA-256
+- Cadena de verificación BDD en cada paso
+- Compatible con Claude Code, Codex, Gemini, OpenCode
+- Dashboard interactivo de estado
+- Trazabilidad completa de decisiones arquitectónicas
 
-```
-Intención --> Spec --> .feature --> Steps --> Código
-          |        |            |          |
-          |        |            |          +-- calidad de steps verificada
-          |        |            +------------- hash bloqueado (sin manipulación)
-          |        +-------------------------- tags @FR-XXX trazados
-          +----------------------------------- clarificado hasta alineado
-```
-
-**Principio clave**: Ninguna parte de la cadena se valida a sí misma. Los archivos `.feature` se bloquean antes de la implementación. Las step definitions se verifican por cobertura y calidad.
-
----
-
-## Uso rápido
+## 📐 Arquitectura
 
 ```
-/iikit-00-constitution     # Gobernanza del proyecto (agnóstico a tecnología)
-/iikit-01-specify          # Especificación de features (QUÉ, no CÓMO)
-/iikit-02-plan             # Plan técnico (CÓMO - frameworks, stack)
-/iikit-03-checklist        # Checklists de calidad
-/iikit-04-testify          # Archivos Gherkin .feature desde requisitos
-/iikit-05-tasks            # Descomposición en tareas
-/iikit-06-analyze          # Verificación de consistencia cross-artefacto
-/iikit-07-implement        # Ejecución con verificación de integridad
-/iikit-08-taskstoissues    # Exportar a GitHub Issues
-/iikit-clarify             # Resolver ambigüedades (cualquier artefacto, cualquier momento)
+specify → plan → checklist → testify → tasks → analyze → implement + verificación de integridad
 ```
 
----
+## 🔗 Parte del Ecosistema MetodologIA
 
-## Cadena de verificación BDD
+| Repo | Descripción |
+|------|-------------|
+| [**mao-sdd**](https://github.com/JaviMontano/mao-sdd) | SDD |
+| [**mao-discovery-framework**](https://github.com/JaviMontano/mao-discovery-framework) | MAO Discovery |
+| [**mao-sovereign-architect**](https://github.com/JaviMontano/mao-sovereign-architect) | Sovereign Architect |
 
-El núcleo de IIC es prevenir la verificación circular — donde la IA modifica tests para que coincidan con código defectuoso.
+## 👤 Autor
 
-1. `/iikit-04-testify` genera archivos Gherkin `.feature` desde los escenarios de la spec
-2. Un hash SHA256 de todas las líneas de steps se almacena en `context.json`
-3. `/iikit-07-implement` aplica la cadena BDD completa antes de marcar cualquier tarea:
-   - **Verificación de hash** — archivos `.feature` sin alterar desde testify
-   - **Cobertura de steps** — todos los pasos Gherkin tienen step definitions
-   - **Fase RED** — los tests deben fallar antes de escribir código de producción
-   - **Fase GREEN** — los tests deben pasar después de escribir código de producción
-   - **Calidad de steps** — sin cuerpos vacíos, sin `assert True`, sin assertions faltantes
+<img src="https://github.com/ejemplo-deo-repo/mao-brand-assets/blob/main/team_javier-montano.webp?raw=true" width="80" align="left" style="margin-right:1rem;">
 
----
+**Javier Montaño** — Founder MetodologIA<br>
+40.000 horas convirtiendo retos en casos de éxito.<br>
+[GitHub](https://github.com/JaviMontano) · [MetodologIA](https://metodologia.info) · [LinkedIn](https://co.linkedin.com/in/javier-andr%C3%A9s-monta%C3%B1o-guzm%C3%A1n-35b02756/en)
 
-## Compatibilidad
+<br clear="both">
 
-| Plataforma | Soporte |
-|------------|---------|
-| Claude Code | Completo (plugin nativo) |
-| OpenAI Codex | Compatible vía CLI |
-| Google Gemini | Compatible vía adaptador |
-| OpenCode | Compatible vía CLI |
+## 📄 Licencia
+
+GPL-3.0 — © 2026 MetodologIA. Copyleft — Para uso y aprovechamiento de profesionales en la era de la IA.
 
 ---
 
-## Parte del Ecosistema MetodologIA / JM Labs
+<details>
+<summary><b>🇬🇧 English</b></summary>
+<br>
 
-IIC se integra con otros componentes del ecosistema:
+# IIC — Intent-Integrity Chain
 
-| Repositorio | Descripción |
-|-------------|-------------|
-| [mao-sdd](https://github.com/JaviMontano/mao-sdd) | Specification-Driven Development para software |
-| [mao-discovery-framework](https://github.com/JaviMontano/mao-discovery-framework) | Framework de discovery y análisis organizacional |
-| [mao-sovereign-architect](https://github.com/JaviMontano/mao-sovereign-architect) | Arquitectura de software con agentes autónomos |
+> Closing the gap between intent and code
+
+Toolkit that preserves developer intent from idea to implementation with cryptographic verification at each step.
+
+### What It Does
+
+- 8-step pipeline with integrity verification
+- Automated ADRs with SHA-256 hashing
+- BDD verification chain at each step
+- Compatible with Claude Code, Codex, Gemini, OpenCode
+- Interactive status dashboard
+- Full architectural decision traceability
+
+### Architecture
+
+```
+specify → plan → checklist → testify → tasks → analyze → implement + integrity verification
+```
+
+### Part of the MetodologIA Ecosystem
+
+| Repo | Description |
+|------|-------------|
+| [**mao-sdd**](https://github.com/JaviMontano/mao-sdd) | SDD |
+| [**mao-discovery-framework**](https://github.com/JaviMontano/mao-discovery-framework) | MAO Discovery |
+| [**mao-sovereign-architect**](https://github.com/JaviMontano/mao-sovereign-architect) | Sovereign Architect |
 
 ---
 
-## Licencia
+<sub>Created by <a href="https://github.com/JaviMontano">Javier Montaño</a> · MetodologIA · GPL-3.0</sub>
 
-Este proyecto está licenciado bajo **GPL-3.0**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+</details>
 
----
-
-<p align="center">
-  Creado por <a href="https://github.com/JaviMontano">Javier Montaño</a> · MetodologIA · GPL-3.0
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3258,100:137DC5&height=120&section=footer" alt="Footer" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:122562,100:137DC5&height=100&section=footer">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:122562,100:137DC5&height=100&section=footer" width="100%">
+</picture>
